@@ -10,7 +10,7 @@ const ProductSchema = new Schema(
       required: true,
       enum: ["Suplementos", "Ropa", "Implementos", "Belleza"],
     },
-    brand: { type: String, default: "Karen Fitness" },
+    brand: { type: String, default: "Karent Fitness" },
     stock: { type: Number, default: 0 },
     image: { type: String }, 
     variants: [{ type: Schema.Types.Mixed }], 

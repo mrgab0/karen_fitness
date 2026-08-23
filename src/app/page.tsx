@@ -5,17 +5,36 @@ import { Menu, ShoppingBag, ArrowRight, Star, Home, Dumbbell, Receipt, Newspaper
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground pb-24 md:pb-0 font-sans">
-      {/* TopAppBar */}
-      <header className="bg-background/80 sticky top-0 backdrop-blur-md border-b border-border-dark flex justify-between items-center px-4 h-16 w-full z-50">
-        <button className="text-gray-400 hover:text-gold transition-colors duration-300">
-          <Menu className="w-6 h-6" />
-        </button>
-        <div className="text-xl md:text-2xl font-bold tracking-widest text-gold uppercase">
-          Karen Fitness
+      {/* Top Navbar */}
+      <header className="bg-background/95 backdrop-blur-md sticky top-0 border-b border-border-dark flex justify-between items-center px-4 md:px-8 h-20 w-full z-50">
+        <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-12 h-12">
+              <Image 
+                src="/logo.jpg" 
+                alt="Karent Fitness" 
+                fill 
+                className="object-contain rounded-full border border-gold/40 shadow-[0_0_10px_rgba(212,175,55,0.2)]" 
+              />
+            </div>
+            <span className="text-xl md:text-2xl font-bold tracking-widest text-gold uppercase hidden sm:block">
+              Karent Fitness
+            </span>
+          </Link>
         </div>
-        <button className="text-gray-400 hover:text-gold transition-colors duration-300">
-          <ShoppingBag className="w-6 h-6" />
-        </button>
+        
+        <div className="flex items-center gap-6">
+          <button className="text-gray-400 hover:text-gold transition-colors duration-300 md:hidden">
+            <Menu className="w-6 h-6" />
+          </button>
+          <div className="hidden md:flex gap-6 text-sm font-semibold tracking-wider text-gray-300 uppercase">
+            <Link href="/catalogo" className="hover:text-gold transition-colors">Productos</Link>
+            <Link href="#" className="hover:text-gold transition-colors">Nosotros</Link>
+          </div>
+          <button className="text-gray-400 hover:text-gold transition-colors duration-300">
+            <ShoppingBag className="w-6 h-6" />
+          </button>
+        </div>
       </header>
 
       <main className="w-full max-w-7xl mx-auto px-4 md:px-8 mt-6">
@@ -29,7 +48,7 @@ export default function HomePage() {
             <div className="relative w-48 h-48 md:w-64 md:h-64 mb-4">
               <Image
                 src="/logo.jpg"
-                alt="Karen Fitness Logo"
+                alt="Karent Fitness Logo"
                 fill
                 className="object-contain drop-shadow-[0_0_20px_rgba(212,175,55,0.5)] rounded-full"
                 priority
@@ -117,7 +136,7 @@ export default function HomePage() {
               </div>
             </div>
             <p className="text-gray-400">
-              Basado en cientos de clientas satisfechas en <span className="font-bold text-white">Karen Fitness</span>
+              Basado en cientos de clientas satisfechas en <span className="font-bold text-white">Karent Fitness</span>
             </p>
           </div>
 
@@ -143,14 +162,14 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-surface border-t border-border-dark mt-12 flex flex-col gap-8 px-4 py-12 items-center text-center pb-32 md:pb-12">
-        <div className="text-2xl font-bold text-gold tracking-widest uppercase">Karen Fitness</div>
+        <div className="text-2xl font-bold text-gold tracking-widest uppercase">Karent Fitness</div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm">
           <a className="text-gray-400 hover:text-gold transition-colors" href="#">Política de Privacidad</a>
           <a className="text-gray-400 hover:text-gold transition-colors" href="#">Términos y Condiciones</a>
           <a className="text-gray-400 hover:text-gold transition-colors" href="#">Envíos y Devoluciones</a>
         </div>
         <div className="text-gray-500 text-sm mt-4">
-          © {new Date().getFullYear()} KAREN FITNESS. C.A. - J-404236597
+          © {new Date().getFullYear()} KARENT FITNESS. C.A. - J-404236597
         </div>
       </footer>
 
